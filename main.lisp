@@ -3,6 +3,7 @@
         :utopian)
   (:import-from :ceramic)
   (:export :app-start
+           :app-stop
            :app-build))
 (in-package :ceramic-utopian-app/main)
 
@@ -11,6 +12,7 @@
   (templates #p"template/"))
 
 (defvar *handler* nil)
+(defvar *window* nil)
 (defvar *app-path* (asdf:system-relative-pathname :ceramic-utopian-app #P"app.lisp"))
 
 (defun server-start ()
@@ -24,12 +26,16 @@
 (defun app-start ()
   (server-start)
   (ceramic:start)
-  (let ((window (ceramic:make-window :url (format nil "http://localhost:5000")
-                                     :width  640
-                                     :height 480)))
-    (ceramic:show window)
-    ;;(ceramic:open-dev-tools window)
-    ))
+  (setf *window* (ceramic:make-window :url (format nil "http://localhost:5000")
+                                      :width  640
+                                      :height 480))
+  (ceramic:show *window*)
+  (ceramic:open-dev-tools *window*))
+
+(defun app-stop ()
+  (server-stop)
+  (ceramic:stop)
+  (setf *window* nil))
 
 (defvar *build-path* (asdf:system-relative-pathname :ceramic-utopian-app "build/"))
 
