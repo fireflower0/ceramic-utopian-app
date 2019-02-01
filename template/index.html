@@ -4,17 +4,17 @@
 <h1>Ceramic Utopian App</h1>
 <script type="text/javascript" src="/static/js/main.js"></script>
 
-<div id="app"></div>
+<div id="hello-example"></div>
+<script type="text/babel">
+ class HelloMessage extends React.Component {
+     render() {
+         return (<div>Hello {this.props.name}</div>);
+     }
+ }
 
-<script type="text/jsx">
-  var HelloWorld = React.createClass({
-    render: function() {
-      return (
-        <p>Hello!World!</p>
-      );
-    }
-  })
-  var m = React.render(<HelloWorld />, document.getElementById('app'));
+ ReactDOM.render(
+     <HelloMessage name="Taylor" />,
+     document.getElementById('hello-example')
+ );
 </script>
-
 {% endblock %}
