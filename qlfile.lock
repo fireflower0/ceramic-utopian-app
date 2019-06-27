@@ -1,0 +1,44 @@
+("clack" .
+ (:class qlot.source.ql:source-ql
+  :initargs (:project-name "clack" :distribution "http://beta.quicklisp.org/dist/quicklisp.txt" :%version :latest)
+  :version "ql-2019-05-21"))
+("ceramic" .
+ (:class qlot.source.ql:source-ql
+  :initargs (:project-name "ceramic" :distribution "http://beta.quicklisp.org/dist/quicklisp.txt" :%version :latest)
+  :version "ql-2019-05-21"))
+("envy" .
+ (:class qlot.source.ql:source-ql
+  :initargs (:project-name "envy" :distribution "http://beta.quicklisp.org/dist/quicklisp.txt" :%version :latest)
+  :version "ql-2019-05-21"))
+("djula" .
+ (:class qlot.source.ql:source-ql
+  :initargs (:project-name "djula" :distribution "http://beta.quicklisp.org/dist/quicklisp.txt" :%version :latest)
+  :version "ql-2019-05-21"))
+("mito" .
+ (:class qlot.source.ql:source-ql
+  :initargs (:project-name "mito" :distribution "http://beta.quicklisp.org/dist/quicklisp.txt" :%version :latest)
+  :version "ql-2019-05-21"))
+("sxql" .
+ (:class qlot.source.ql:source-ql
+  :initargs (:project-name "sxql" :distribution "http://beta.quicklisp.org/dist/quicklisp.txt" :%version :latest)
+  :version "ql-2019-05-21"))
+("trivial-mimes" .
+ (:class qlot.source.ql:source-ql
+  :initargs (:project-name "trivial-mimes" :distribution "http://beta.quicklisp.org/dist/quicklisp.txt" :%version :latest)
+  :version "ql-2019-05-21"))
+("quicklisp" .
+ (:class qlot.source.ql:source-ql-all
+  :initargs (:distribution "http://beta.quicklisp.org/dist/quicklisp.txt" :%version :latest)
+  :version "2019-05-21"))
+("lsx" .
+ (:class qlot.source.git:source-git
+  :initargs (:project-name "lsx" :remote-url "https://github.com/fukamachi/lsx")
+  :version "git-39f71f91dec8cce81b730dab21dbf4d905acb2a1"
+  :remote-url "https://github.com/fukamachi/lsx"
+  :ref "39f71f91dec8cce81b730dab21dbf4d905acb2a1"))
+("utopian" .
+ (:class qlot.source.git:source-git
+  :initargs (:project-name "utopian" :remote-url "https://github.com/fukamachi/utopian.git" :branch "next")
+  :version "git-7cbce5012a2966763978ff6769189edef6a55b9b"
+  :remote-url "https://github.com/fukamachi/utopian.git"
+  :ref "7cbce5012a2966763978ff6769189edef6a55b9b"))

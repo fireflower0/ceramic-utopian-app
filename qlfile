@@ -1,0 +1,11 @@
+ql clack :latest
+ql ceramic :latest
+ql envy :latest
+ql djula :latest
+ql mito :latest
+ql sxql :latest
+ql trivial-mimes :latest
+ql :all :latest
+
+git lsx https://github.com/fukamachi/lsx
+git utopian https://github.com/fukamachi/utopian.git :branch next

@@ -40,7 +40,8 @@
 (defvar *build-path* (asdf:system-relative-pathname :ceramic-utopian-app "build/"))
 
 (defun app-build ()
-  (ceramic:bundle :ceramic-utopian-app :bundle-pathname (format nil "~Aapp.tar" *build-path*)))
+  (ceramic:bundle :ceramic-utopian-app
+                  :bundle-pathname (format nil "~Aceramic-utopian-app.tar" *build-path*)))
 
 (ceramic:define-entry-point :ceramic-utopian-app ()
   (app-start))
